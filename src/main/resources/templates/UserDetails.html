@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<style>
+value { 
+  font-weight: bold;
+  color: blue;
+}
+</style>
+</head>
+<body>
+
+<h1>Simple Log4j Spring Boot App</h1>
+
+<!--  <tr th:each="users: ${user}" >
+  	<td th:text="${users.firstName}" />
+    <td th:text="${users.lastName}" />
+    <td th:text="${users.city}" />
+    <td th:text="${users.state}" />
+    <td th:text="${users.country}" />
+    <td th:text="${users.phoneno}" />
+    <td th:text="${users.currency}" />
+</tr>
+
+<br>
+<br>
+ -->
+<!-- <div th:each="users : ${user}">
+    <div th:text="${users.firstName}">FirstName : </div>
+    <div th:text="${users.lastName}">LastName : </div>
+    <div th:text="${users.city}">City : </div>
+    <div th:text="${users.state}">State : </div>
+    <div th:text="${users.country}">Country : </div>
+    <div th:text="${users.phoneno}">Phone No : </div>
+    <div th:text="${users.currency}">Currency Code :</div>
+</div> -->
+
+<pairlist th:each="users : ${user}">
+     <pair><key>First Name : </key><value th:text="${users.firstName}"></value></pair> <br>
+     <pair><key>Last Name : </key><value th:text="${users.lastName}"></value></pair>  <br>
+     <pair><key>City : </key><value th:text="${users.city}"></value></pair>  <br>
+     <pair><key>State : </key><value th:text="${users.state}"></value></pair>  <br>
+     <pair><key>Country : </key><value th:text="${users.country}"></value></pair>  <br>
+     <pair><key>Phone No : </key><value th:text="${users.phoneno}"></value></pair>  <br>
+     <pair><key>Currency Code : </key><value th:text="${users.currency}"></value></pair>  <br>
+     <pair><key>Last Name : </key><value th:text="${users.lastName}"></value></pair> 
+</pairlist>
+
+
+</body>
+</html>
